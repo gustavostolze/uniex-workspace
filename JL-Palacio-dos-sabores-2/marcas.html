@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcas | JL - Palácio dos Sabores</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans relative flex flex-col min-h-screen">
+
+    <header class="bg-white shadow-md sticky top-0 z-40 border-b-2 border-[#D4AF37]">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="w-10 h-10 border-2 border-[#D4AF37] rounded-full flex items-center justify-center font-bold text-[#D4AF37]">JL</div>
+                <span class="text-xl font-bold text-[#2E014B] hidden lg:inline">Palácio dos Sabores</span>
+            </div>
+            
+            <nav class="hidden md:flex space-x-6 font-bold text-sm text-[#2E014B]">
+                <a href="index.html" class="hover:text-[#D4AF37] transition">Home</a>
+                <a href="marcas.html" class="text-[#D4AF37] transition">Marcas</a>
+                <a href="catalogo.html" class="hover:text-[#D4AF37] transition">Catálogo</a>
+                <a href="empresa.html" class="hover:text-[#D4AF37] transition">A Empresa</a>
+                <a href="noticias.html" class="hover:text-[#D4AF37] transition">Notícias</a>
+                <a href="contato.html" class="hover:text-[#D4AF37] transition">Contato</a>
+            </nav>
+
+            <a href="https://wa.me/5534999999999?text=Olá, vim pelo site!" target="_blank" class="bg-[#2E014B] text-white px-5 py-2 rounded-full font-bold text-[10px] md:text-xs border border-[#D4AF37] uppercase hover:bg-black transition shadow-lg">
+                Falar com Vendedor
+            </a>
+        </div>
+    </header>
+
+    <main class="flex-grow bg-gray-50">
+        <section class="w-full bg-[#2E014B] border-b-4 border-[#D4AF37]">
+            <img src="./banner.png.jpg" alt="Banner JL Palácio dos Sabores" class="w-full h-[150px] md:h-[250px] block object-cover object-center">
+        </section>
+
+        <section class="py-16">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-4xl font-extrabold text-[#2E014B] mb-4">Marcas que Trabalhamos</h1>
+                <p class="text-center text-gray-600 mb-12">As melhores parcerias para garantir qualidade no seu comércio.</p>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 items-center justify-items-center">
+                    <div class="w-32 h-32 bg-white rounded-lg shadow-md flex items-center justify-center border border-gray-200 text-gray-400 font-bold hover:shadow-lg transition">Marca 1</div>
+                    <div class="w-32 h-32 bg-white rounded-lg shadow-md flex items-center justify-center border border-gray-200 text-gray-400 font-bold hover:shadow-lg transition">Marca 2</div>
+                    <div class="w-32 h-32 bg-white rounded-lg shadow-md flex items-center justify-center border border-gray-200 text-gray-400 font-bold hover:shadow-lg transition">Marca 3</div>
+                    <div class="w-32 h-32 bg-white rounded-lg shadow-md flex items-center justify-center border border-gray-200 text-gray-400 font-bold hover:shadow-lg transition">Marca 4</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#1a0129] text-gray-300 py-8 border-t-4 border-[#D4AF37] mt-auto">
+        <div class="container mx-auto px-4 text-center md:flex md:justify-between md:text-left items-center">
+            <div class="mb-4 md:mb-0">
+                <span class="text-xl font-bold text-[#D4AF37] block">JL Palácio dos Sabores</span>
+                <span class="text-xs">O Melhor Açaí para o Seu Negócio.</span>
+            </div>
+            <div class="text-sm text-gray-400">&copy; 2026 JL Palácio dos Sabores. Todos os direitos reservados.</div>
+        </div>
+    </footer>
+    <a href="https://wa.me/5534999999999?text=Olá, estava no site JL Palácio dos Sabores e gostaria de fazer um pedido!" target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-2xl hover:bg-[#1ebe57] hover:scale-110 transition-all duration-300 z-50">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+</body>
+</html>
