@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Novidades | JL - Palácio dos Sabores</title>
     
+    <meta property="og:title" content="Novidades | JL Palácio dos Sabores">
+    <meta property="og:description" content="Fique por dentro das novidades e dicas de vendas da JL Palácio dos Sabores.">
+    
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body class="corpo-site">
 
+    <!-- CABEÇALHO ROXO -->
     <header class="cabecalho">
         <div class="container-nav">
             <div class="logo-area">
@@ -27,50 +31,136 @@
             </nav>
 
             <div class="header-acoes">
-                <a href="https://wa.me/5534999999999" target="_blank" class="btn-vendedor">Falar com Vendedor</a>
+                <a href="https://wa.me/5534999999999?text=Olá, vim pelo site!" target="_blank" class="btn-vendedor">Falar com Vendedor</a>
                 <button id="btn-menu" class="btn-mobile"><i class="fa-solid fa-bars"></i></button>
             </div>
         </div>
+
+        <div id="menu-mobile" class="menu-mobile-lista hidden">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="marcas.html">Marcas</a>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="empresa.html">A Empresa</a>
+                <a href="novidades.html" class="link-ativo">Novidades</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+        </div>
     </header>
 
-    <main style="flex-grow: 1; background-color: #f9fafb;">
-        <section class="banner-section">
-            <img src="./banner.png.jpg" alt="Banner JL" class="banner-img">
+    <main>
+        <!-- HERO SECTION - VERDE VIBRANTE -->
+        <section class="hero-section">
+            <div class="hero-container">
+                <h1 class="titulo-principal">Novidades e Dicas</h1>
+                <p class="subtitulo">
+                    Fique por dentro das novidades do nosso catálogo e dicas de vendas 
+                    para impulsionar o seu negócio.
+                </p>
+            </div>
         </section>
 
-        <section style="padding: 64px 0;">
+        <!-- DIVISOR ONDA - VERDE PARA BRANCO -->
+        <div class="wave-divider verde-para-branco">
+            <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+                <path d="M0,40 C320,100 720,0 1440,60 L1440,100 L0,100 Z"></path>
+            </svg>
+        </div>
+
+        <!-- SEÇÃO DE NOVIDADES -->
+        <section class="secao-conteudo">
             <div class="container">
-                <h1 class="titulo-principal" style="text-align: center;">Novidades e Dicas</h1>
-                <p style="text-align: center; color: #6b7280; margin-bottom: 48px;">Fique por dentro das novidades do nosso catálogo e dicas de vendas.</p>
-                
                 <div class="grid-novidades">
-                    <div class="card-noticia borda-laranja-news">
-                        <span class="tag-noticia tag-laranja">Dica de Vendas</span>
-                        <h3 style="font-size: 24px; color: var(--roxo-acai); margin: 16px 0 12px 0; font-weight: bold;">Como montar o copo perfeito de Açaí</h3>
-                        <p style="color: #4b5563; line-height: 1.6;">Descubra as camadas ideais de leite em pó, leite condensado e frutas para encantar o seu cliente e aumentar a lucratividade do seu negócio.</p>
+                    <div class="card-noticia borda-laranja-news fade-in">
+                        <span class="tag-noticia tag-laranja">
+                            <i class="fa-solid fa-lightbulb"></i> Dica de Vendas
+                        </span>
+                        <h3 style="font-family: 'Poppins', sans-serif; font-size: 1.4rem; color: var(--roxo-acai); margin: 20px 0 16px 0; font-weight: 600;">
+                            Como montar o copo perfeito de Açaí
+                        </h3>
+                        <p style="color: var(--cinza-texto); line-height: 1.7; font-size: 1rem;">
+                            Descubra as camadas ideais de leite em pó, leite condensado e frutas para encantar o seu cliente e aumentar a lucratividade do seu negócio.
+                        </p>
+                        <a href="#" class="link-consulta" style="display: inline-block; margin-top: 16px;">
+                            Ler mais
+                        </a>
                     </div>
 
-                    <div class="card-noticia borda-verde-news">
-                        <span class="tag-noticia tag-verde">Novidade</span>
-                        <h3 style="font-size: 24px; color: var(--roxo-acai); margin: 16px 0 12px 0; font-weight: bold;">Novo Creme de Pitaya no Catálogo</h3>
-                        <p style="color: #4b5563; line-height: 1.6;">A febre do verão chegou no Palácio dos Sabores. Refrescante, saudável e com uma cor vibrante que vende por si só.</p>
+                    <div class="card-noticia borda-verde-news fade-in" style="animation-delay: 0.1s;">
+                        <span class="tag-noticia tag-verde">
+                            <i class="fa-solid fa-sparkles"></i> Novidade
+                        </span>
+                        <h3 style="font-family: 'Poppins', sans-serif; font-size: 1.4rem; color: var(--roxo-acai); margin: 20px 0 16px 0; font-weight: 600;">
+                            Novo Creme de Pitaya no Catálogo
+                        </h3>
+                        <p style="color: var(--cinza-texto); line-height: 1.7; font-size: 1rem;">
+                            A febre do verão chegou no Palácio dos Sabores. Refrescante, saudável e com uma cor vibrante que vende por si só.
+                        </p>
+                        <a href="catalogo.html" class="link-consulta" style="display: inline-block; margin-top: 16px;">
+                            Ver no catálogo
+                        </a>
+                    </div>
+
+                    <div class="card-noticia borda-laranja-news fade-in" style="animation-delay: 0.2s;">
+                        <span class="tag-noticia tag-laranja">
+                            <i class="fa-solid fa-chart-line"></i> Dica de Vendas
+                        </span>
+                        <h3 style="font-family: 'Poppins', sans-serif; font-size: 1.4rem; color: var(--roxo-acai); margin: 20px 0 16px 0; font-weight: 600;">
+                            Aumente suas vendas no verão
+                        </h3>
+                        <p style="color: var(--cinza-texto); line-height: 1.7; font-size: 1rem;">
+                            Estratégias comprovadas para aproveitar a alta temporada e maximizar seus lucros com açaí e cremes gelados.
+                        </p>
+                        <a href="#" class="link-consulta" style="display: inline-block; margin-top: 16px;">
+                            Ler mais
+                        </a>
+                    </div>
+
+                    <div class="card-noticia borda-verde-news fade-in" style="animation-delay: 0.3s;">
+                        <span class="tag-noticia tag-verde">
+                            <i class="fa-solid fa-box-open"></i> Novidade
+                        </span>
+                        <h3 style="font-family: 'Poppins', sans-serif; font-size: 1.4rem; color: var(--roxo-acai); margin: 20px 0 16px 0; font-weight: 600;">
+                            Novas Embalagens Sustentáveis
+                        </h3>
+                        <p style="color: var(--cinza-texto); line-height: 1.7; font-size: 1rem;">
+                            Pensando no meio ambiente, agora oferecemos opções de embalagens biodegradáveis para o seu negócio.
+                        </p>
+                        <a href="catalogo.html" class="link-consulta" style="display: inline-block; margin-top: 16px;">
+                            Ver no catálogo
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- SEÇÃO NEWSLETTER -->
+        <section class="secao-conteudo fundo-branco py-16">
+            <div class="container text-center">
+                <h2 class="secao-titulo">Quer receber novidades?</h2>
+                <p class="subtitulo" style="color: var(--cinza-texto); margin-bottom: 2rem;">
+                    Entre em contato conosco e fique por dentro de todas as novidades e promoções!
+                </p>
+                <a href="https://wa.me/5534999999999?text=Olá, quero receber novidades da JL!" target="_blank" class="btn-consultar">
+                    <i class="fa-brands fa-whatsapp"></i> Quero Receber Novidades
+                </a>
+            </div>
+        </section>
     </main>
 
+    <!-- RODAPÉ ROXO -->
     <footer class="rodape">
         <div class="container-rodape">
             <div class="rodape-info">
                 <span class="rodape-logo">JL Palácio dos Sabores</span>
                 <span class="rodape-sub">O Melhor Açaí para o Seu Negócio.</span>
             </div>
-            <div class="rodape-copyright">&copy; 2026 JL Palácio dos Sabores.</div>
+            <div class="rodape-copyright">&copy; 2026 JL Palácio dos Sabores. Todos os direitos reservados.</div>
         </div>
     </footer>
     
-    <a href="https://wa.me/5534999999999" target="_blank" class="whatsapp-flutuante">
+    <!-- WHATSAPP FLUTUANTE -->
+    <a href="https://wa.me/5534999999999?text=Olá, estava no site JL Palácio dos Sabores!" target="_blank" class="whatsapp-flutuante">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
