@@ -6,111 +6,379 @@
     <title>Catálogo | JL - Palácio dos Sabores</title>
     
     <meta property="og:title" content="Catálogo | JL Palácio dos Sabores">
-    <meta property="og:description" content="Conheça nosso catálogo completo de Açaí e Cremes para o seu comércio.">
+    <meta property="og:description" content="Conheça nosso catálogo completo de Açaí, Caldas, Adicionais e Embalagens para o seu comércio.">
     <meta property="og:image" content="https://lucasnunes034.github.io/JL-Palacio-dos-sabores/banner.png.jpg">
     <meta property="og:url" content="https://lucasnunes034.github.io/JL-Palacio-dos-sabores/catalogo.html">
     <meta property="og:type" content="website">
 
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>html { scroll-behavior: smooth; }</style>
-
-    <script>
-        tailwind.config = { theme: { extend: { colors: { 'roxo-acai': '#874BAB', 'verde-guarana': '#6BBF59', 'amarelo-sol': '#FFFD4A', 'laranja-acao': '#FF7F11' } } } }
-    </script>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans relative flex flex-col min-h-screen">
+<body>
 
-    <header class="bg-white shadow-md sticky top-0 z-40 border-b-4 border-amarelo-sol">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center gap-2">
-                <div class="w-10 h-10 border-2 border-roxo-acai rounded-full flex items-center justify-center font-bold text-roxo-acai bg-purple-50">JL</div>
-                <span class="text-xl font-bold text-roxo-acai hidden lg:inline">Palácio dos Sabores</span>
+    <!-- HEADER -->
+    <header class="cabecalho">
+        <div class="container-nav">
+            <div class="logo-area">
+                <div class="logo-circulo">JL</div>
+                <span class="logo-texto">Palácio dos Sabores</span>
             </div>
             
-            <nav class="hidden md:flex space-x-6 font-bold text-sm text-gray-700">
-                <a href="index.html" class="hover:text-laranja-acao transition">Home</a>
-                <a href="marcas.html" class="hover:text-laranja-acao transition">Marcas</a>
-                <a href="catalogo.html" class="text-laranja-acao transition">Catálogo</a>
-                <a href="empresa.html" class="hover:text-laranja-acao transition">A Empresa</a>
-                <a href="noticias.html" class="hover:text-laranja-acao transition">Notícias</a>
-                <a href="contato.html" class="hover:text-laranja-acao transition">Contato</a>
+            <nav class="menu-desktop">
+                <a href="index.html">Home</a>
+                <a href="marcas.html">Marcas</a>
+                <a href="catalogo.html" class="link-ativo">Catálogo</a>
+                <a href="empresa.html">A Empresa</a>
+                <a href="noticias.html">Novidades</a>
+                <a href="contato.html">Contato</a>
             </nav>
 
-            <div class="flex items-center gap-4">
-                <a href="https://wa.me/5534999999999?text=Olá, vim pelo site!" target="_blank" class="bg-laranja-acao text-white px-5 py-2 rounded-full font-bold text-[10px] md:text-xs uppercase hover:bg-orange-600 transition shadow-lg">Falar com Vendedor</a>
-                <button id="btn-menu" class="md:hidden text-roxo-acai hover:text-laranja-acao focus:outline-none"><i class="fa-solid fa-bars text-2xl"></i></button>
+            <div class="header-acoes">
+                <a href="https://wa.me/5534999999999?text=Olá, vim pelo site!" target="_blank" class="btn-vendedor">Falar com Vendedor</a>
+                <button id="btn-menu" class="btn-mobile"><i class="fa-solid fa-bars"></i></button>
             </div>
         </div>
 
-        <div id="menu-mobile" class="hidden md:hidden bg-white border-t-2 border-amarelo-sol absolute w-full left-0 shadow-xl">
-            <nav class="flex flex-col px-4 py-2 font-bold text-sm text-gray-700">
-                <a href="index.html" class="block py-3 border-b border-gray-100 hover:text-laranja-acao">Home</a>
-                <a href="marcas.html" class="block py-3 border-b border-gray-100 hover:text-laranja-acao">Marcas</a>
-                <a href="catalogo.html" class="block py-3 border-b border-gray-100 text-laranja-acao">Catálogo</a>
-                <a href="empresa.html" class="block py-3 border-b border-gray-100 hover:text-laranja-acao">A Empresa</a>
-                <a href="noticias.html" class="block py-3 border-b border-gray-100 hover:text-laranja-acao">Notícias</a>
-                <a href="contato.html" class="block py-3 hover:text-laranja-acao">Contato</a>
+        <div id="menu-mobile" class="menu-mobile-lista hidden">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="marcas.html">Marcas</a>
+                <a href="catalogo.html" class="link-ativo">Catálogo</a>
+                <a href="empresa.html">A Empresa</a>
+                <a href="noticias.html">Novidades</a>
+                <a href="contato.html">Contato</a>
             </nav>
         </div>
     </header>
 
-    <main class="flex-grow">
-        <section class="w-full bg-roxo-acai border-b-4 border-verde-guarana">
-            <img src="./banner.png.jpg" alt="Banner JL Palácio dos Sabores" class="w-full h-[150px] md:h-[250px] block object-cover object-center opacity-90">
+    <main>
+        <!-- BANNER -->
+        <section class="banner-section">
+            <img src="./banner.png.jpg" alt="Banner JL Palácio dos Sabores" class="banner-img">
         </section>
 
-        <section class="py-16 bg-white">
-            <div class="container mx-auto px-4">
-                <h1 class="text-4xl font-extrabold text-center text-roxo-acai mb-4">Nosso Catálogo</h1>
-                <p class="text-center text-gray-600 mb-12">Confira nossos produtos de alta qualidade para o seu negócio.</p>
+        <!-- TELA DE CATEGORIAS (INICIAL) -->
+        <section id="tela-categorias" class="hero-section">
+            <div class="container">
+                <h1 class="titulo-principal">Nosso Catálogo</h1>
+                <p class="subtitulo">Selecione uma categoria para ver os produtos disponíveis</p>
                 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition">
-                        <div class="h-48 bg-roxo-acai flex items-center justify-center text-amarelo-sol">
-                            <i class="fa-solid fa-ice-cream text-6xl"></i>
-                        </div>
-                        <div class="p-6 text-center">
-                            <h3 class="text-xl font-bold text-roxo-acai mb-2">Açaí Tradicional</h3>
-                            <p class="text-gray-600 mb-4 text-sm">Caixas de 5L e 10L. Sabor autêntico e textura cremosa para o copo perfeito.</p>
-                            <a href="contato.html" class="text-laranja-acao font-bold hover:text-orange-600 transition">Consultar Preço &rarr;</a>
+                <div class="grid-categorias">
+                    <div class="card-categoria" onclick="mostrarCategoria('barras-acai')">
+                        <img src="./Barras de açaí/barra palacio.png" alt="Barras de Açaí" class="card-categoria-img">
+                        <div class="card-categoria-corpo">
+                            <h3 class="card-categoria-titulo">Barras de Açaí</h3>
+                            <span class="card-categoria-qtd">6 produtos</span>
                         </div>
                     </div>
-                    <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition">
-                        <div class="h-48 bg-roxo-acai flex items-center justify-center text-verde-guarana">
-                            <i class="fa-solid fa-bowl-food text-6xl"></i>
-                        </div>
-                        <div class="p-6 text-center">
-                            <h3 class="text-xl font-bold text-roxo-acai mb-2">Açaí com Cupuaçu</h3>
-                            <p class="text-gray-600 mb-4 text-sm">Caixas de 5L e 10L. A mistura perfeita entre o doce e o azedinho.</p>
-                            <a href="contato.html" class="text-laranja-acao font-bold hover:text-orange-600 transition">Consultar Preço &rarr;</a>
+
+                    <div class="card-categoria" onclick="mostrarCategoria('caldas-soft')">
+                        <img src="./caldas soft/bag.png" alt="Caldas Soft" class="card-categoria-img">
+                        <div class="card-categoria-corpo">
+                            <h3 class="card-categoria-titulo">Caldas Soft</h3>
+                            <span class="card-categoria-qtd">7 produtos</span>
                         </div>
                     </div>
-                    <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition">
-                        <div class="h-48 bg-roxo-acai flex items-center justify-center text-amarelo-sol">
-                            <i class="fa-solid fa-spoon text-6xl"></i>
+
+                    <div class="card-categoria" onclick="mostrarCategoria('adicionais')">
+                        <img src="./ADICICIONAIS E PRODDUTOS PARA PRODUÇÃO/50 trufa premium.png" alt="Adicionais e Produtos" class="card-categoria-img">
+                        <div class="card-categoria-corpo">
+                            <h3 class="card-categoria-titulo">Adicionais e Produtos</h3>
+                            <span class="card-categoria-qtd">58 produtos</span>
                         </div>
-                        <div class="p-6 text-center">
-                            <h3 class="text-xl font-bold text-roxo-acai mb-2">Cremes Especiais</h3>
-                            <p class="text-gray-600 mb-4 text-sm">Creme de Pitaya, Tapioca, Ninho e muito mais para diversificar seu cardápio.</p>
-                            <a href="contato.html" class="text-laranja-acao font-bold hover:text-orange-600 transition">Consultar Preço &rarr;</a>
+                    </div>
+
+                    <div class="card-categoria" onclick="mostrarCategoria('embalagens')">
+                        <img src="./EMBALAENS E DESCARTAVOS/copo 500.png" alt="Embalagens e Descartáveis" class="card-categoria-img">
+                        <div class="card-categoria-corpo">
+                            <h3 class="card-categoria-titulo">Embalagens e Descartáveis</h3>
+                            <span class="card-categoria-qtd">26 produtos</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- SEÇÃO: BARRAS DE AÇAÍ -->
+        <section id="barras-acai" class="secao-categoria hidden">
+            <div class="container">
+                <div class="categoria-header">
+                    <h1 class="titulo-principal">Barras de Açaí</h1>
+                    <button class="btn-voltar" onclick="voltarCategorias()">
+                        <i class="fa-solid fa-arrow-left"></i> Voltar para Categorias
+                    </button>
+                </div>
+                
+                <div class="grid-produtos" id="produtos-barras-acai"></div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: CALDAS SOFT -->
+        <section id="caldas-soft" class="secao-categoria hidden">
+            <div class="container">
+                <div class="categoria-header">
+                    <h1 class="titulo-principal">Caldas Soft</h1>
+                    <button class="btn-voltar" onclick="voltarCategorias()">
+                        <i class="fa-solid fa-arrow-left"></i> Voltar para Categorias
+                    </button>
+                </div>
+                
+                <div class="grid-produtos" id="produtos-caldas-soft"></div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: ADICIONAIS E PRODUTOS PARA PRODUÇÃO -->
+        <section id="adicionais" class="secao-categoria hidden">
+            <div class="container">
+                <div class="categoria-header">
+                    <h1 class="titulo-principal">Adicionais e Produtos para Produção</h1>
+                    <button class="btn-voltar" onclick="voltarCategorias()">
+                        <i class="fa-solid fa-arrow-left"></i> Voltar para Categorias
+                    </button>
+                </div>
+                
+                <div class="grid-produtos" id="produtos-adicionais"></div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: EMBALAGENS E DESCARTÁVEIS -->
+        <section id="embalagens" class="secao-categoria hidden">
+            <div class="container">
+                <div class="categoria-header">
+                    <h1 class="titulo-principal">Embalagens e Descartáveis</h1>
+                    <button class="btn-voltar" onclick="voltarCategorias()">
+                        <i class="fa-solid fa-arrow-left"></i> Voltar para Categorias
+                    </button>
+                </div>
+                
+                <div class="grid-produtos" id="produtos-embalagens"></div>
+            </div>
+        </section>
     </main>
 
-    <footer class="bg-roxo-acai text-white py-8 border-t-4 border-amarelo-sol mt-auto">
-        <div class="container mx-auto px-4 text-center md:flex md:justify-between md:text-left items-center">
-            <div class="mb-4 md:mb-0"><span class="text-xl font-bold text-amarelo-sol block">JL Palácio dos Sabores</span><span class="text-xs text-gray-200">O Melhor Açaí para o Seu Negócio.</span></div>
-            <div class="text-sm text-gray-300">&copy; 2026 JL Palácio dos Sabores. Todos os direitos reservados.</div>
+    <!-- FOOTER -->
+    <footer class="rodape">
+        <div class="container-rodape">
+            <div class="rodape-info">
+                <span class="rodape-logo">JL Palácio dos Sabores</span>
+                <span class="rodape-sub">O Melhor Açaí para o Seu Negócio.</span>
+            </div>
+            <div class="rodape-copyright">&copy; 2026 JL Palácio dos Sabores. Todos os direitos reservados.</div>
         </div>
     </footer>
-    <a href="https://wa.me/5534999999999?text=Olá, estava no site JL Palácio dos Sabores e gostaria de fazer um pedido!" target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-2xl hover:bg-[#1ebe57] hover:scale-110 transition-all duration-300 z-50"><i class="fa-brands fa-whatsapp"></i></a>
+    
+    <!-- WHATSAPP FLUTUANTE -->
+    <a href="https://wa.me/5534999999999?text=Olá, estava no site JL Palácio dos Sabores e gostaria de fazer um pedido!" target="_blank" class="whatsapp-flutuante">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
 
     <script>
-        const btnMenu = document.getElementById('btn-menu'); const menuMobile = document.getElementById('menu-mobile'); btnMenu.addEventListener('click', () => { menuMobile.classList.toggle('hidden'); });
+        // ============================================
+        // DADOS DOS PRODUTOS POR CATEGORIA
+        // ============================================
+        
+        const produtosPorCategoria = {
+            'barras-acai': {
+                pasta: './Barras de açaí/',
+                produtos: [
+                    { img: '117 polpinha  media.png', nome: 'Polpinha Média' },
+                    { img: '118 polpinha especial.png', nome: 'Polpinha Especial' },
+                    { img: 'barra palacio.png', nome: 'Barra Palácio' },
+                    { img: 'especial.png', nome: 'Especial' },
+                    { img: 'popular.png', nome: 'Popular' },
+                    { img: 'R. AÇAI DELICIA DO PARÁ (MÉDIO) 1KG.png', nome: 'Açaí Delícia do Pará Médio 1KG' }
+                ]
+            },
+            'caldas-soft': {
+                pasta: './caldas soft/',
+                produtos: [
+                    { img: '9 CALDA DE BAUNILHA.png', nome: 'Calda de Baunilha' },
+                    { img: '9 CALDA DE CHOCOLATE.png', nome: 'Calda de Chocolate' },
+                    { img: '9 CALDA DE MORANGO.png', nome: 'Calda de Morango' },
+                    { img: 'bag CUPUAÇU.png', nome: 'Bag Cupuaçu' },
+                    { img: 'bag LEITEN.png', nome: 'Bag Leite Condensado' },
+                    { img: 'bag.png', nome: 'Bag Tradicional' },
+                    { img: 'bagPIT.png', nome: 'Bag Pitaya' }
+                ]
+            },
+            'adicionais': {
+                pasta: './ADICICIONAIS E PRODDUTOS PARA PRODUÇÃO/',
+                produtos: [
+                    { img: '50 trufa premium.png', nome: 'Trufa Premium' },
+                    { img: '51 trufa premium 14kg.png', nome: 'Trufa Premium 14kg' },
+                    { img: '63 trufa branca.png', nome: 'Trufa Branca' },
+                    { img: '144 cappuccino.png', nome: 'Cappuccino' },
+                    { img: '203 gota.png', nome: 'Gota de Chocolate' },
+                    { img: '207 gomets SINO.png', nome: 'Gomets Sino' },
+                    { img: '281 goma gelatine beijo.png', nome: 'Goma Gelatine Beijo' },
+                    { img: '282 goma gelatine banana.png', nome: 'Goma Gelatine Banana' },
+                    { img: '283 goma gelatine vampiro.png', nome: 'Goma Gelatine Vampiro' },
+                    { img: '285 goma gelatine cobrinha.png', nome: 'Goma Gelatine Cobrinha' },
+                    { img: '1261 mel 500g.png', nome: 'Mel 500g' },
+                    { img: '1262 mel 1,4.png', nome: 'Mel 1,4kg' },
+                    { img: '1401 straciotella meio amarga.png', nome: 'Straciotella Meio Amarga' },
+                    { img: '9010460.png', nome: 'Produto Especial' },
+                    { img: 'AÇUCAR MASCAVO.png', nome: 'Açúcar Mascavo' },
+                    { img: 'AVEIA FINA.png', nome: 'Aveia Fina' },
+                    { img: 'blend.png', nome: 'Blend' },
+                    { img: 'CAIXA MORANGO.png', nome: 'Caixa Morango' },
+                    { img: 'cappucciono.png', nome: 'Cappuccino Pó' },
+                    { img: 'castanha de caju triturada.png', nome: 'Castanha de Caju Triturada' },
+                    { img: 'castanha media usibras.jpg', nome: 'Castanha Média Usibras' },
+                    { img: 'castanha.png', nome: 'Castanha' },
+                    { img: 'cereja marrasdquinho.png', nome: 'Cereja Marrasquinho' },
+                    { img: 'cereja.png', nome: 'Cereja' },
+                    { img: 'chipshow avelã.png', nome: 'Chipshow Avelã' },
+                    { img: 'chococanty.png', nome: 'Chococanty' },
+                    { img: 'ciochella 4kg.png', nome: 'Ciochella 4kg' },
+                    { img: 'ciochella 14kg.png', nome: 'Ciochella 14kg' },
+                    { img: 'cobertura cara.png', nome: 'Cobertura Caramelo' },
+                    { img: 'cobertura choco.png', nome: 'Cobertura Chocolate' },
+                    { img: 'cobertura mor.png', nome: 'Cobertura Morango' },
+                    { img: 'creme de valsa 14kg.png', nome: 'Creme de Valsa 14kg' },
+                    { img: 'creme de valsa.png', nome: 'Creme de Valsa' },
+                    { img: 'fardo piracanjuba.png', nome: 'Fardo Piracanjuba' },
+                    { img: 'gomets gumdrop.png', nome: 'Gomets Gumdrop' },
+                    { img: 'gomets jeli.png', nome: 'Gomets Jeli' },
+                    { img: 'gota.png', nome: 'Gota' },
+                    { img: 'granola.png', nome: 'Granola' },
+                    { img: 'lc.png', nome: 'Leite Condensado' },
+                    { img: 'LEITE EM PÓ 2KG o.png', nome: 'Leite em Pó 2kg' },
+                    { img: 'morango congelao.png', nome: 'Morango Congelado' },
+                    { img: 'ovomaltine 700.png', nome: 'Ovomaltine 700g' },
+                    { img: 'P27 PAÇOCA 2K.png', nome: 'Paçoca 2kg' },
+                    { img: 'PÓ TR.png', nome: 'Pó Tradicional' },
+                    { img: 'PREPARADO abacaxi_ao_vinho.png', nome: 'Preparado Abacaxi ao Vinho' },
+                    { img: 'PREPARADO abacaxi.png', nome: 'Preparado Abacaxi' },
+                    { img: 'PREPARADO ameixa.png', nome: 'Preparado Ameixa' },
+                    { img: 'PREPARADO morango (1).png', nome: 'Preparado Morango' },
+                    { img: 'PREPARADO morango (2).png', nome: 'Preparado Morango 2' },
+                    { img: 'PREPARADO morango (3).png', nome: 'Preparado Morango 3' },
+                    { img: 'PREPARADO morango (4).png', nome: 'Preparado Morango 4' },
+                    { img: 'straciotalea branca.png', nome: 'Straciotella Branca' },
+                    { img: 'straciotela ao leite.png', nome: 'Straciotella ao Leite' },
+                    { img: 'straciotela m amarga.png', nome: 'Straciotella Meio Amarga' },
+                    { img: 'trufa premium.png', nome: 'Trufa Premium' },
+                    { img: 'xarope 1l.png', nome: 'Xarope 1L' },
+                    { img: 'xarope 5l.png', nome: 'Xarope 5L' },
+                    { img: 'xarope ep.png', nome: 'Xarope Especial' }
+                ]
+            },
+            'embalagens': {
+                pasta: './EMBALAENS E DESCARTAVOS/',
+                produtos: [
+                    { img: '185 bandeija circular.png', nome: 'Bandeja Circular' },
+                    { img: '700 colher curta.png', nome: 'Colher Curta' },
+                    { img: '701 colher longa.png', nome: 'Colher Longa' },
+                    { img: 'balde branco.png', nome: 'Balde Branco' },
+                    { img: 'bandeija circular.png', nome: 'Bandeja Circular' },
+                    { img: 'barca grande.png', nome: 'Barca Grande' },
+                    { img: 'barca media.png', nome: 'Barca Média' },
+                    { img: 'barca pequena.png', nome: 'Barca Pequena' },
+                    { img: 'copo 300.png', nome: 'Copo 300ml' },
+                    { img: 'copo 400.png', nome: 'Copo 400ml' },
+                    { img: 'copo 500.png', nome: 'Copo 500ml' },
+                    { img: 'copo 700.png', nome: 'Copo 700ml' },
+                    { img: 'copo açai.png', nome: 'Copo Açaí' },
+                    { img: 'petisqueira 5d.png', nome: 'Petisqueira 5 Divisórias' },
+                    { img: 'petisqueira 6d.png', nome: 'Petisqueira 6 Divisórias' },
+                    { img: 'pote 1l.png', nome: 'Pote 1L' },
+                    { img: 'pote 250.png', nome: 'Pote 250ml' },
+                    { img: 'pote 500.png', nome: 'Pote 500ml' },
+                    { img: 'pote 700.png', nome: 'Pote 700ml' },
+                    { img: 'prato colorido.png', nome: 'Prato Colorido' },
+                    { img: 'tampa 300.png', nome: 'Tampa 300ml' },
+                    { img: 'tampa 500.png', nome: 'Tampa 500ml' },
+                    { img: 'tampa 700.png', nome: 'Tampa 700ml' },
+                    { img: 'tampa bolha 2.png', nome: 'Tampa Bolha' },
+                    { img: 'tattta diagonal.png', nome: 'Tampa Diagonal' },
+                    { img: 'tatttta conica.png', nome: 'Tampa Cônica' }
+                ]
+            }
+        };
+
+        // ============================================
+        // FUNÇÕES DE NAVEGAÇÃO
+        // ============================================
+
+        function mostrarCategoria(categoriaId) {
+            // Esconde a tela de categorias
+            document.getElementById('tela-categorias').classList.add('hidden');
+            
+            // Esconde todas as seções de categoria
+            document.querySelectorAll('.secao-categoria').forEach(secao => {
+                secao.classList.add('hidden');
+            });
+            
+            // Mostra a seção selecionada
+            const secaoSelecionada = document.getElementById(categoriaId);
+            secaoSelecionada.classList.remove('hidden');
+            
+            // Carrega os produtos se ainda não foram carregados
+            const gridProdutos = document.getElementById('produtos-' + categoriaId);
+            if (gridProdutos && gridProdutos.children.length === 0) {
+                carregarProdutos(categoriaId, gridProdutos);
+            }
+            
+            // Scroll suave para o topo
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function voltarCategorias() {
+            // Esconde todas as seções de categoria
+            document.querySelectorAll('.secao-categoria').forEach(secao => {
+                secao.classList.add('hidden');
+            });
+            
+            // Mostra a tela de categorias
+            document.getElementById('tela-categorias').classList.remove('hidden');
+            
+            // Scroll suave para o topo
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // ============================================
+        // FUNÇÃO PARA CARREGAR PRODUTOS DINAMICAMENTE
+        // ============================================
+
+        function carregarProdutos(categoriaId, container) {
+            const categoria = produtosPorCategoria[categoriaId];
+            if (!categoria) return;
+
+            categoria.produtos.forEach((produto, index) => {
+                const card = document.createElement('div');
+                card.className = 'card-produto fade-in';
+                card.style.animationDelay = `${index * 0.05}s`;
+                
+                const imgSrc = categoria.pasta + produto.img;
+                const mensagemWhatsApp = encodeURIComponent(`Olá! Gostaria de saber o preço do produto: ${produto.nome}`);
+                
+                card.innerHTML = `
+                    <img src="${imgSrc}" alt="${produto.nome}" class="card-produto-img" onerror="this.src='./Imagens/1.png'">
+                    <div class="card-produto-corpo">
+                        <h3 class="card-produto-titulo">${produto.nome}</h3>
+                        <a href="https://wa.me/5534999999999?text=${mensagemWhatsApp}" target="_blank" class="btn-consultar">Consultar Preço</a>
+                    </div>
+                `;
+                
+                container.appendChild(card);
+            });
+        }
+
+        // ============================================
+        // MENU MOBILE
+        // ============================================
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const btnMenu = document.getElementById('btn-menu');
+            const menuMobile = document.getElementById('menu-mobile');
+            
+            if (btnMenu && menuMobile) {
+                btnMenu.addEventListener('click', function() {
+                    menuMobile.classList.toggle('hidden');
+                });
+            }
+        });
     </script>
 </body>
 </html>
