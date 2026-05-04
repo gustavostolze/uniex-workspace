@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | JL - Palácio dos Sabores</title>
+    
+    <meta property="og:title" content="Fale Conosco | JL Palácio dos Sabores">
+    <meta property="og:description" content="Faça seu pedido ou solicite um orçamento para a sua loja agora mesmo!">
+    <meta property="og:image" content="">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="corpo-site">
+
+    <!-- CABEÇALHO ROXO -->
+    <header class="cabecalho">
+        <div class="container-nav">
+            <div class="logo-area">
+                <div class="logo-circulo">JL</div>
+                <span class="logo-texto">Palácio dos Sabores</span>
+            </div>
+            
+            <nav class="menu-desktop">
+                <a href="index.html">Home</a>
+                <a href="marcas.html">Marcas</a>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="empresa.html">A Empresa</a>
+                <a href="novidades.html">Novidades</a>
+                <a href="contato.html" class="link-ativo">Contato</a>
+            </nav>
+
+            <div class="header-acoes">
+                <a href="https://wa.me/5534999999999?text=Olá, vim pelo site!" target="_blank" class="btn-vendedor">Falar com Vendedor</a>
+                <button id="btn-menu" class="btn-mobile"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+
+        <div id="menu-mobile" class="menu-mobile-lista hidden">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="marcas.html">Marcas</a>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="empresa.html">A Empresa</a>
+                <a href="novidades.html">Novidades</a>
+                <a href="contato.html" class="link-ativo">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION - VERDE VIBRANTE -->
+        <section class="hero-section">
+            <div class="hero-container">
+                <h1 class="titulo-principal">Fale Conosco</h1>
+                <p class="subtitulo">
+                    Estamos prontos para atender você! Escolha o canal de sua preferência 
+                    e entre em contato conosco.
+                </p>
+            </div>
+        </section>
+
+        <!-- DIVISOR ONDA - VERDE PARA BRANCO -->
+        <div class="wave-divider verde-para-branco">
+            <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+                <path d="M0,40 C320,100 720,0 1440,60 L1440,100 L0,100 Z"></path>
+            </svg>
+        </div>
+
+        <!-- SEÇÃO DE CONTATOS -->
+        <section class="secao-conteudo">
+            <div class="container">
+                <h2 class="secao-titulo">Nossos Canais</h2>
+                
+                <div class="grid-contatos">
+                    <!-- WHATSAPP -->
+                    <a href="https://wa.me/5534999999999?text=Olá, vim pelo site!" target="_blank" class="card-contato borda-verde fade-in" style="text-decoration: none;">
+                        <img src="imagens/ICONES BOTOES/whatsapp.jpg" alt="WhatsApp" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div style="display: none; flex-direction: column; align-items: center; gap: 8px;">
+                            <i class="fa-brands fa-whatsapp" style="font-size: 40px; color: #25D366;"></i>
+                            <span style="font-size: 12px; color: var(--cinza-texto);">WhatsApp</span>
+                        </div>
+                    </a>
+
+                    <!-- E-MAIL -->
+                    <a href="mailto:erickhenriqueborges@gmail.com" class="card-contato borda-vermelha fade-in" style="text-decoration: none; animation-delay: 0.1s;">
+                        <img src="imagens/ICONES BOTOES/email icone.png" alt="E-mail" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div style="display: none; flex-direction: column; align-items: center; gap: 8px;">
+                            <i class="fa-solid fa-envelope" style="font-size: 40px; color: #EA4335;"></i>
+                            <span style="font-size: 12px; color: var(--cinza-texto);">E-mail</span>
+                        </div>
+                    </a>
+
+                    <!-- INSTAGRAM -->
+                    <a href="https://www.instagram.com/jlpalaciodossabores/" target="_blank" class="card-contato borda-laranja fade-in" style="text-decoration: none; animation-delay: 0.2s;">
+                        <img src="imagens/ICONES BOTOES/instagram-logotipo_971166-164438.avif" alt="Instagram" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div style="display: none; flex-direction: column; align-items: center; gap: 8px;">
+                            <i class="fa-brands fa-instagram" style="font-size: 40px; color: #E4405F;"></i>
+                            <span style="font-size: 12px; color: var(--cinza-texto);">Instagram</span>
+                        </div>
+                    </a>
+
+                    <!-- LOCALIZAÇÃO -->
+                    <a href="https://maps.app.goo.gl/Z3jje2TBZgANEpT18" target="_blank" class="card-contato borda-roxa fade-in" style="text-decoration: none; animation-delay: 0.3s;">
+                        <img src="imagens/ICONES BOTOES/localização.jpg" alt="Localização" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div style="display: none; flex-direction: column; align-items: center; gap: 8px;">
+                            <i class="fa-solid fa-location-dot" style="font-size: 40px; color: var(--roxo-acai);"></i>
+                            <span style="font-size: 12px; color: var(--cinza-texto);">Localização</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO INFORMAÇÕES -->
+        <section class="secao-conteudo fundo-branco">
+            <div class="container">
+                <div class="grid-produtos" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                    <div class="card-produto fade-in">
+                        <div class="card-icone-box">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <div class="card-corpo">
+                            <h3>Horário de Atendimento</h3>
+                            <p>Segunda a Sexta: 8h às 18h<br>Sábado: 8h às 12h</p>
+                        </div>
+                    </div>
+
+                    <div class="card-produto fade-in" style="animation-delay: 0.1s;">
+                        <div class="card-icone-box">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="card-corpo">
+                            <h3>Telefone</h3>
+                            <p>(34) 99999-9999<br>WhatsApp disponível</p>
+                        </div>
+                    </div>
+
+                    <div class="card-produto fade-in" style="animation-delay: 0.2s;">
+                        <div class="card-icone-box">
+                            <i class="fa-solid fa-map-marker-alt"></i>
+                        </div>
+                        <div class="card-corpo">
+                            <h3>Endereço</h3>
+                            <p>Uberlândia - MG<br>Região do Triângulo Mineiro</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO CTA -->
+        <section class="secao-conteudo py-16">
+            <div class="container text-center">
+                <h2 class="secao-titulo">Pronto para fazer seu pedido?</h2>
+                <p class="subtitulo" style="color: var(--cinza-texto); margin-bottom: 2rem;">
+                    Clique no botão abaixo e fale diretamente com um de nossos vendedores.
+                </p>
+                <a href="https://wa.me/5534999999999?text=Olá, vim pelo site e gostaria de fazer um pedido!" target="_blank" class="btn-consultar btn-laranja">
+                    <i class="fa-brands fa-whatsapp"></i> Fazer Pedido Agora
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- RODAPÉ ROXO -->
+    <footer class="rodape">
+        <div class="container-rodape">
+            <div class="rodape-info">
+                <span class="rodape-logo">JL Palácio dos Sabores</span>
+                <span class="rodape-sub">O Melhor Açaí para o Seu Negócio.</span>
+            </div>
+            <div class="rodape-copyright">&copy; 2026 JL Palácio dos Sabores. Todos os direitos reservados.</div>
+        </div>
+    </footer>
+    
+    <!-- WHATSAPP FLUTUANTE -->
+    <a href="https://wa.me/5534999999999?text=Olá, estava no site JL Palácio dos Sabores!" target="_blank" class="whatsapp-flutuante">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
