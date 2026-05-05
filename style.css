@@ -370,31 +370,6 @@ main {
     }
 }
 
-/* Overlays com cores da identidade visual */
-.catalogo-overlay {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-}
-
-.catalogo-overlay-roxo {
-    background: linear-gradient(
-        135deg,
-        rgba(61, 11, 64, 0.88) 0%,
-        rgba(90, 26, 94, 0.75) 40%,
-        rgba(61, 11, 64, 0.65) 100%
-    );
-}
-
-.catalogo-overlay-verde {
-    background: linear-gradient(
-        135deg,
-        rgba(0, 168, 68, 0.85) 0%,
-        rgba(0, 200, 83, 0.72) 40%,
-        rgba(0, 168, 68, 0.62) 100%
-    );
-}
-
 /* Conteúdo centralizado */
 .catalogo-conteudo {
     position: relative;
