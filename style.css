@@ -435,12 +435,38 @@ main {
 }
 
 /* Ondas entre seções */
+
+
+/* Onda no Topo da Seção */
+.catalogo-wave-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px; /* Mesma altura da inferior */
+    z-index: 3;
+    overflow: hidden;
+}
+
+.catalogo-wave-top svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+@media (max-width: 768px) {
+    .catalogo-wave-top {
+        height: 50px;
+    }
+}
+/* Onda inferior da Seção */
 .catalogo-wave {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 100px;
+    height: 60px;
     z-index: 3;
     overflow: hidden;
 }
@@ -461,57 +487,41 @@ main {
     fill: var(--verde-guarana);
 }
 
-/* Responsividade do catálogo */
+
+/* ===== ESTILO ITALIANO PARA TÍTULOS DO CATÁLOGO ===== */
+
+.catalogo-titulo {
+    font-family: 'Poppins', sans-serif !important; /* Usa a fonte já carregada no projeto */
+    font-weight: 700 !important;
+    font-style: sweetpea!important; /* Efeito "deitado" italiano */
+    text-transform: capitalize !important; /* Primeira letra maiúscula para elegância */
+    letter-spacing: -1.5px !important; /* Letras mais próximas para fluidez */
+    
+    /* Ajustes visuais */
+    color: var(--branco) !important;
+    text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4) !important;
+    transform: skewX(-2deg); /* Inclinação extra para dinamismo */
+    line-height: 1.1 !important;
+}
+
+/* Responsividade Adaptada ao Novo Estilo */
 @media (max-width: 768px) {
     .catalogo-titulo {
-        font-size: 2.2rem;
-    }
-
-    .catalogo-descricao {
-        font-size: 1rem;
-    }
-
-    .btn-ver-produtos {
-        padding: 14px 32px;
-        font-size: 13px;
-    }
-
-    .catalogo-wave {
-        height: 60px;
+        font-size: 2.8rem !important;
     }
 }
 
 @media (max-width: 480px) {
     .catalogo-titulo {
-        font-size: 1.8rem;
-    }
-
-    .catalogo-descricao {
-        font-size: 0.95rem;
-        margin-bottom: 28px;
-    }
-
-    .btn-ver-produtos {
-        padding: 12px 28px;
-        font-size: 12px;
-        letter-spacing: 1px;
-    }
-
-    .catalogo-wave {
-        height: 40px;
+        font-size: 2.2rem !important;
     }
 }
 
 @media (min-width: 1200px) {
     .catalogo-titulo {
-        font-size: 4.5rem;
-    }
-
-    .catalogo-descricao {
-        font-size: 1.35rem;
+        font-size: 5rem !important;
     }
 }
-
 /* ===== SEÇÕES DE CONTEÚDO ===== */
 .secao-conteudo {
     padding: 64px 24px;
