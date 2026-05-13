@@ -575,7 +575,7 @@ main {
 }
 
 @media (min-width: 768px) {
-    .grid-produtos { grid-template-columns: repeat(3, 1fr); }
+    .grid-produtos { grid-template-columns: repeat(4, 1fr); }
 }
 
 .card-produto {
