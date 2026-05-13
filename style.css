@@ -203,8 +203,8 @@ main {
 .hidden { display: none; }
 
 /* ===== SEÇÃO HERO VERDE VIBRANTE ===== */
-.hero-section { 
-    padding: 80px 24px; 
+.hero-section {
+    padding: 80px 24px;
     background: linear-gradient(135deg, var(--verde-guarana) 0%, var(--verde-guarana-escuro) 100%);
     text-align: center;
     position: relative;
@@ -232,6 +232,21 @@ main {
     height: 400px;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 50%;
+}
+
+/* ===== HERO DA HOME PAGE - IMAGEM DE FUNDO ===== */
+.home-page .hero-section {
+    padding: 0;
+    background-image: url('./capas/hero-capa.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 450px;
+}
+
+.home-page .hero-section::before,
+.home-page .hero-section::after {
+    display: none;
 }
 
 .hero-container {
@@ -302,6 +317,14 @@ main {
 
 .wave-divider.verde-para-branco {
     background: var(--verde-guarana);
+}
+
+/* Wave na Home Page: fundo transparente para mostrar a imagem do hero */
+.home-page .wave-divider.verde-para-branco {
+    background: transparent;
+    margin-top: -80px;
+    position: relative;
+    z-index: 2;
 }
 
 .wave-divider.verde-para-branco svg path {
