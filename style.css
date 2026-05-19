@@ -516,7 +516,7 @@ main {
 .catalogo-titulo {
     font-family: 'Poppins', sans-serif !important; /* Usa a fonte já carregada no projeto */
     font-weight: 700 !important;
-    font-style: sweetpea!important; /* Efeito "deitado" italiano */
+    font-style: italic !important; /* Efeito itálico */
     text-transform: capitalize !important; /* Primeira letra maiúscula para elegância */
     letter-spacing: -1.5px !important; /* Letras mais próximas para fluidez */
     
@@ -845,6 +845,88 @@ main {
 .mr-3 { margin-right: 0.75rem; }
 
 /* ===== PÁGINA NOVIDADES ===== */
+
+/* ===== BLOCOS ZIG-ZAG - ORIGEM DO AÇAÍ ===== */
+.origem-acai-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.origem-bloco {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+}
+
+.origem-bloco--invertido {
+    flex-direction: row-reverse;
+}
+
+.origem-bloco__texto {
+    flex: 1;
+    min-width: 0;
+}
+
+.origem-bloco__imagem {
+    flex: 1;
+    min-width: 0;
+}
+
+.origem-bloco__titulo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    color: var(--roxo-acai);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.origem-bloco__descricao {
+    margin-bottom: 1.25rem;
+    color: var(--cinza-texto);
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.origem-bloco__img {
+    width: 100%;
+    height: 340px;
+    border-radius: 18px;
+    box-shadow: var(--sombra-leve);
+    object-fit: cover;
+    display: block;
+}
+
+/* ===== RESPONSIVIDADE - COLUNA ÚNICA EM MOBILE ===== */
+@media (max-width: 768px) {
+    .origem-bloco,
+    .origem-bloco--invertido {
+        flex-direction: column;
+    }
+
+    .origem-acai-wrapper {
+        gap: 40px;
+    }
+
+    .origem-bloco__img {
+        height: 250px;
+    }
+
+    .origem-bloco__titulo {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .origem-bloco__descricao {
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+
 .grid-novidades {
     display: grid;
     grid-template-columns: 1fr;
