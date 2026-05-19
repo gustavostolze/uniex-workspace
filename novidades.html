@@ -3,13 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Novidades | JL - Palácio dos Sabores</title>
+    <title>Origem do Açaí | JL - Palácio dos Sabores</title>
     
-    <meta property="og:title" content="Novidades | JL Palácio dos Sabores">
-    <meta property="og:description" content="Fique por dentro das novidades e dicas de vendas da JL Palácio dos Sabores.">
+    <meta property="og:title" content="Origem do Açaí | JL Palácio dos Sabores">
+    <meta property="og:description" content="Conheça a história e a origem do melhor açaí do Brasil com a JL Palácio dos Sabores.">
     
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Estilos locais para a seção Origem do Açaí (Zig-Zag) -->
+    <style>
+        /* ===== BLOCOS ZIG-ZAG - ORIGEM DO AÇAÍ ===== */
+        .origem-acai-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+        }
+
+        .origem-bloco {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 40px;
+        }
+
+        /* Bloco 2: Imagem à esquerda, Texto à direita (inversão elegante) */
+        .origem-bloco--invertido {
+            flex-direction: row-reverse;
+        }
+
+        .origem-bloco__texto {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .origem-bloco__imagem {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .origem-bloco__titulo {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2rem;
+            color: var(--roxo-acai);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .origem-bloco__descricao {
+            margin-bottom: 1.25rem;
+            color: var(--cinza-texto);
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .origem-bloco__img {
+            width: 100%;
+            height: 340px;
+            border-radius: 18px;
+            box-shadow: var(--sombra-leve);
+            object-fit: cover;
+            display: block;
+        }
+
+        /* ===== RESPONSIVIDADE - COLUNA ÚNICA EM MOBILE ===== */
+        @media (max-width: 768px) {
+            .origem-bloco,
+            .origem-bloco--invertido {
+                flex-direction: column;
+            }
+
+            .origem-acai-wrapper {
+                gap: 40px;
+            }
+
+            .origem-bloco__img {
+                height: 250px;
+            }
+
+            .origem-bloco__titulo {
+                font-size: 1.5rem;
+                text-align: center;
+            }
+
+            .origem-bloco__descricao {
+                font-size: 1rem;
+                text-align: center;
+            }
+        }
+
+        /* ===== ÍCONES SVG INLINE (substitui Font Awesome) ===== */
+        .icone-menu-svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--branco);
+            display: block;
+        }
+
+        .icone-whatsapp-svg {
+            width: 32px;
+            height: 32px;
+            fill: white;
+            display: block;
+        }
+    </style>
 </head>
 <body class="corpo-site">
 
@@ -26,13 +125,20 @@
                 <a href="marcas.html">Marcas</a>
                 <a href="catalogo.html">Catálogo</a>
                 <a href="sobre-nos.html">Sobre nós</a>
-                <a href="novidades.html" class="link-ativo">Origem Açai</a>
+                <a href="novidades.html" class="link-ativo">Origem Açaí</a>
                 <a href="contato.html">Contato</a>
             </nav>
 
             <div class="header-acoes">
                 <a href="https://wa.me/553491610570?text=Olá, vim pelo site!" target="_blank" class="btn-vendedor">Falar com Vendedor</a>
-                <button id="btn-menu" class="btn-mobile"><i class="fa-solid fa-bars"></i></button>
+                <button id="btn-menu" class="btn-mobile">
+                    <!-- Ícone hamburger SVG (sem Font Awesome) -->
+                    <svg class="icone-menu-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <rect y="3" width="24" height="2" rx="1"/>
+                        <rect y="11" width="24" height="2" rx="1"/>
+                        <rect y="19" width="24" height="2" rx="1"/>
+                    </svg>
+                </button>
             </div>
         </div>
 
@@ -42,7 +148,7 @@
                 <a href="marcas.html">Marcas</a>
                 <a href="catalogo.html">Catálogo</a>
                 <a href="sobre-nos.html">Sobre nós</a>
-                <a href="novidades.html" class="link-ativo">Origem Açai</a>
+                <a href="novidades.html" class="link-ativo">Origem Açaí</a>
                 <a href="contato.html">Contato</a>
             </nav>
         </div>
@@ -52,9 +158,9 @@
         <!-- HERO SECTION - VERDE VIBRANTE -->
         <section class="hero-section">
             <div class="hero-container">
-                <h1 class="titulo-principal">Historia do Açai</h1>
+                <h1 class="titulo-principal">De onde Vem O Açai da J&L</h1>
                 <p class="subtitulo">
-                    Conheça a Historia do melhor açai do Brasil
+                    Na Palácio dos Sabores, acreditamos que o segredo de um açaí inesquecível começa muito antes de chegar à tigela. Nossa história atravessa o Brasil, conectando a biodiversidade da Amazônia à tecnologia da nossa fábrica em Uberlândia 
                 </p>
             </div>
         </section>
@@ -65,42 +171,57 @@
                 <path d="M0,40 C320,100 720,0 1440,60 L1440,100 L0,100 Z"></path>
             </svg>
         </div>
+
+        <!-- SEÇÃO ORIGEM DO AÇAÍ - LAYOUT ZIG-ZAG -->
         <section class="secao-conteudo fundo-branco">
-            <div class="container">
-                <div class="flex-col md:flex-row items-center gap-10" style="display: flex; flex-wrap: wrap;">
-                    <div class="md:w-1/2" style="width: 100%; flex: 1; min-width: 300px;">
-                        <img src="imgEmpresa/fachada.jpeg" alt="Interior da Empresa" style="width: 100%; border-radius: 18px; box-shadow: var(--sombra-leve); object-fit: cover; height: 300px;" >
-                        <p><br><br><br><br></p>
-                        <img src="imgEmpresa/fachada.jpeg" alt="" style="width: 100%; border-radius: 16px; box-shadow: var(--sombra-leve); object-fit: cover; height: 300px;">
-                        
-                        
-                       
-           
-                    </div>
-                    
-                    <div class="md:w-1/2" style="width: 100%; flex: 1; min-width: 300px;">
-                        <h2 style="font-family: 'Poppins', sans-serif; font-size: 2rem; color: var(--roxo-acai); font-weight: 700; margin-bottom: 1.5rem;">A JL Palácio dos Sabores</h2>
-                        <p style="margin-bottom: 1.25rem; color: var(--cinza-texto); font-size: 1.1rem; line-height: 1.7;">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus omnis quas fuga cum ad, laudantium voluptates sit exercitationem soluta dignissimos quis aperiam voluptatem quaerat, enim provident quasi sed iure harumlorem
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos molestiae saepe vitae illo laborum ex? Sunt nihil quam vero repellat illum. Aut maiores error cupiditate accusantium tenetur consectetur quis molestias!Lorem
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut architecto saepe iste? Sed unde facere animi laboriosam, necessitatibus praesentium cum neque iste eaque error quas assumenda ipsam doloremque maxime enim.lorem<Br><Br>
+            <div class="origem-acai-wrapper">
 
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus omnis quas fuga cum ad, laudantium voluptates sit exercitationem soluta dignissimos quis aperiam voluptatem quaerat, enim provident quasi sed iure harumlorem
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos molestiae saepe vitae illo laborum ex? Sunt nihil quam vero repellat illum. Aut maiores error cupiditate accusantium tenetur consectetur quis molestias!Lorem
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut architecto saepe iste? Sed unde facere animi laboriosam, necessitatibus praesentium cum neque iste eaque error quas assumenda ipsam doloremque maxime enim.loremLorem ipsum dolor sit amet consectetur adipisicing elit. Possimus omnis quas fuga cum ad, laudantium voluptates sit exercitationem soluta dignissimos quis aperiam voluptatem quaerat, enim provident quasi sed iure harumlorem
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos molestiae saepe vitae illo laborum ex? Sunt nihil quam vero repellat illum. Aut maiores error cupiditate accusantium tenetur consectetur quis molestias!Lorem
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut architecto saepe iste? Sed unde facere animi laboriosam, necessitatibus praesentium cum neque iste eaque error quas assumenda ipsam doloremque maxime enim.lorem
-
-
-                            
-
+                <!-- BLOCO 1: Texto à Esquerda | Imagem à Direita -->
+                <div class="origem-bloco">
+                    <div class="origem-bloco__texto">
+                        <h2 class="origem-bloco__titulo">A Origem do Açaí</h2>
+                        <p class="origem-bloco__descricao">
+                           Tudo começa nas terras férteis do Pará, o maior e melhor produtor de açaí do mundo. Nossos frutos são colhidos de forma sustentável em palmeiras nativas. O processo é artesanal e respeita o tempo da natureza, garantindo que apenas os grãos mais maduros e nutritivos sejam selecionados.Assim que colhido, o fruto passa por um rigoroso processo de higienização e despolpamento. É aqui que o açaí se transforma naquela polpa vibrante e pura que preserva todas as propriedades antioxidantes. Essa polpa é congelada em barras de alta qualidade, embaladas com segurança para manter o frescor da floresta intacto.  
                         </p>
-        </section>
-      
-        
+                        
+                            
+                        
+                    </div>
+                    <div class="origem-bloco__imagem">
+                        <img src="imgEmpresa/fotoaçai.jpeg" alt="Origem do Açaí - Fachada" class="origem-bloco__img">
+                    </div>
+                </div>
 
-       
-    </main> 
+                <!-- BLOCO 2: Imagem à Esquerda | Texto à Direita (row-reverse) -->
+                <div class="origem-bloco origem-bloco--invertido">
+                    <div class="origem-bloco__texto">
+                        <h2 class="origem-bloco__titulo">A J&L Palácio dos Sabores</h2>
+                        <p class="origem-bloco__descricao">
+                           Para garantir que a qualidade não se perca no caminho, utilizamos uma logística impecável. As barras de açaí são transportadas em caminhões frigoríficos monitorados, cruzando o país até chegarem à nossa fábrica em Uberlândia, MG.  Já em nossa fábrica, a mágica acontece. Unimos a tradição paraense com o paladar mineiro. Nossa receita utiliza apenas a polpa pura, sem adição de água ou conservantes, para entregar um açaí autêntico e cheio de sabor. Cada lote é testado para garantir que o padrão de qualidade seja mantido, desde a colheita até a entrega final.
+                        </p>
+                        
+                    </div>
+                    <div class="origem-bloco__imagem">
+                        <img src="imgEmpresa/fotoestoque.jpeg" alt="JL Palácio dos Sabores" class="origem-bloco__img">
+                    </div>
+                </div>
+
+                <!-- BLOCO 3: Texto à Esquerda | Imagem à Direita -->
+                <div class="origem-bloco">
+                    <div class="origem-bloco__texto">
+                        <h2 class="origem-bloco__titulo">Qualidade e Tradição</h2>
+                        <p class="origem-bloco__descricao">
+                           O resultado é um açaí cremoso, com textura perfeita e o equilíbrio ideal de sabores.  Além de produzirmos o nosso açaí pronto para consumo, a Palácio dos Sabores também disponibiliza as barras de açaí puro para venda em nossa loja! Se você busca a matéria-prima original para suas próprias 
+                        </p> 
+                    </div>
+                    <div class="origem-bloco__imagem">
+                        <img src="imgEmpresa/fachada.jpeg" alt="Qualidade e Tradição" class="origem-bloco__img">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
 
     <!-- RODAPÉ ROXO -->
     <footer class="rodape">
@@ -113,9 +234,11 @@
         </div>
     </footer>
     
-    <!-- WHATSAPP FLUTUANTE -->
-    <a href="https://wa.me/553491610570?text=Olá, vim pelo site!"  target="_blank" class="whatsapp-flutuante">
-        <i class="fa-brands fa-whatsapp"></i>
+    <!-- WHATSAPP FLUTUANTE (SVG local, sem Font Awesome) -->
+    <a href="https://wa.me/553491610570?text=Olá, vim pelo site!" target="_blank" class="whatsapp-flutuante">
+        <svg class="icone-whatsapp-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
     </a>
 
     <script src="script.js"></script>
