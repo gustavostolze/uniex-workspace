@@ -89,11 +89,15 @@ main {
 }
 
 .logo-texto { 
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.3rem; 
-    font-weight: 700; 
-    color: var(--branco);
-    letter-spacing: -0.02em;
+    font-family: 'Allura', cursive !important;
+    font-size: 2.4rem !important; /* No limite máximo solicitado */
+    font-weight: 400 !important; 
+    color: var(--branco) !important;
+    letter-spacing: 0.04em !important; /* Pequeno espaço para dar mais leitura */
+    display: inline-block !important;
+    line-height: 1.1 !important;
+    text-transform: none !important; /* Mantém as maiúsculas e minúsculas naturais */
+    vertical-align: middle !important;
 }
 
 /* Menu Desktop - Links Brancos */
