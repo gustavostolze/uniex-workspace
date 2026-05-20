@@ -402,16 +402,6 @@ main {
     max-width: 800px;
 }
 
-.catalogo-titulo {
-    font-family: 'Poppins', sans-serif;
-    font-size: 3.5rem;
-    font-weight: 800;
-    color: var(--branco);
-    margin-bottom: 20px;
-    text-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-    line-height: 1.1;
-    letter-spacing: -0.02em;
-}
 
 .catalogo-descricao {
     color: rgba(255, 255, 255, 0.92);
