@@ -397,10 +397,9 @@ main {
     }
 }
 
-/* Conteúdo centralizado */
+/* Conteúdo centralizado - botão permanece no centro */
 .catalogo-conteudo {
-    position: relative;
-    z-index: 2;
+    position: static;
     text-align: center;
     padding: 40px 24px;
     max-width: 800px;
@@ -432,6 +431,8 @@ main {
     transition: var(--transicao);
     box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
     border: 2px solid var(--branco);
+    position: relative;
+    z-index: 4;
 }
 
 .btn-ver-produtos:hover {
@@ -505,32 +506,47 @@ main {
 }
 
 
-/* ===== ESTILO ITALIANO PARA TÍTULOS DO CATÁLOGO ===== */
+/* ===== TÍTULOS DO CATÁLOGO - POSICIONADOS NO CANTO INFERIOR DIREITO ===== */
 
 .catalogo-titulo {
-    font-family: 'Poppins', sans-serif !important; /* Usa a fonte já carregada no projeto */
-    font-weight: 700 !important;
-    font-style: italic !important; /* Efeito itálico */
-    text-transform: capitalize !important; /* Primeira letra maiúscula para elegância */
-    letter-spacing: -1.5px !important; /* Letras mais próximas para fluidez */
-    
-    /* Ajustes visuais */
+    /* Posicionamento absoluto no canto inferior direito */
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    margin: 0;
+    z-index: 10;
+
+    /* Tipografia cursiva local */
+    font-family: 'Allura', cursive !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
+    text-transform: none !important;
+    letter-spacing: 0.02em !important;
+
+    /* Leitura sobre qualquer fundo */
     color: var(--branco) !important;
-    text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4) !important;
-    transform: skewX(-2deg); /* Inclinação extra para dinamismo */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8) !important;
     line-height: 1.1 !important;
+
+    /* Limpeza de propriedades antigas de centralização */
+    text-align: right;
+    transform: none;
 }
 
-/* Responsividade Adaptada ao Novo Estilo */
+/* Responsividade Adaptada */
 @media (max-width: 768px) {
     .catalogo-titulo {
         font-size: 2.8rem !important;
+        bottom: 15px;
+        right: 15px;
     }
 }
 
 @media (max-width: 480px) {
     .catalogo-titulo {
         font-size: 2.2rem !important;
+        bottom: 10px;
+        right: 10px;
     }
 }
 
