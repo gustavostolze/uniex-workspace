@@ -620,6 +620,42 @@ main {
     font-weight: 700;
 }
 
+@media(min-width: 1280px) {
+    .sobre-nos-main-container img {
+        margin-right: 30px;
+    }
+}
+
+
+@media(max-width: 1280px) {
+    .sobre-nos-main-container {
+        flex-direction: column;
+    }
+
+    .secao-conteudo .container {
+        max-width: 550px;
+    }
+    .sobre-nos-main-container img {
+        margin: 15px 0px;
+    }
+
+    div {
+        text-align: center;
+    }
+
+
+    .sobre-nos-second-content {
+        margin-left: auto;
+    }
+
+}
+
+@media(max-width: 490px) {
+    .sobre-nos-main-container img {
+        max-height: 250px;
+    }
+}
+
 /* ===== CARDS PAGINA HOME ===== */
 .grid-produtos {
     display: grid;
