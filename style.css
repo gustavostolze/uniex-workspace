@@ -259,7 +259,7 @@ main {
 /* ===== HERO DA HOME PAGE - IMAGEM DE FUNDO ===== */
 .home-page .hero-section {
     padding: 0;
-    background-image: url('./capas/hero-capa.png');
+    background-image: url('./capas/novacapa.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
